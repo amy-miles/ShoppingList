@@ -1,14 +1,29 @@
 package model;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+
 /**
  * @author Amy Miles
  * CIS 175 - Fall 2023
  * Sep 7, 2023
  */
+
+@Entity
+@Table(name="items")
 public class ListItem {
 	//private members
+	@Id
+	@GeneratedValue
+	@Column(name="ID")
 	private int id;
+	@Column(name="STORE")
 	private String store;
+	@Column(name="ITEM")
 	private String item;
 	
 	/**
