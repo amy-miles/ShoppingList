@@ -82,7 +82,5 @@ public class ListItem {
 	public String returnItemDetails() {
 		return this.store + ":" + this.item;
 	}
-
-
 	
 }
