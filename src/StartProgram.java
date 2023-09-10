@@ -6,6 +6,8 @@ import java.util.Scanner;
 import controller.ListItemHelper;
 import model.ListItem;
 
+
+//finds and creates the item, then passes the item over to the ListItemHelper to persist or merge to the DB
 public class StartProgram {
 
 		static Scanner in = new Scanner(System.in);
@@ -120,9 +122,13 @@ public class StartProgram {
 			}
 
 		}
-
+		
+		//captures the results from this method and iterates through and prints them all out
 		private static void viewTheList() {
-			// TODO Auto-generated method stub
+			List<ListItem> allItems = lih.showAllItems();
+			for(ListItem singleItem : allItems) {
+				System.out.println(singleItem.returnItemDetails());
+			}
 			
 
 		}
